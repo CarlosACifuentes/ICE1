@@ -13,6 +13,7 @@ class GameScene: SKScene
 {
     //instance variables
     var ocean: Ocean?
+    var island: Island?
     var plane: Plane?
     
     
@@ -27,6 +28,11 @@ class GameScene: SKScene
         ocean = Ocean()
         ocean?.position = CGPoint(x: 0, y: 700)
         addChild(ocean!) //add ocean to the scene
+        
+        //adding island
+        island = Island()
+        
+        addChild(island!)
         
         //add plane to scene
         plane = Plane()
@@ -76,6 +82,7 @@ class GameScene: SKScene
     override func update(_ currentTime: TimeInterval)
     {
         ocean?.Update()
+        island?.Update()
         plane?.Update()
         // Called before each frame is rendered
     }

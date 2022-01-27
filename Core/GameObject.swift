@@ -40,6 +40,8 @@ class GameObject : SKSpriteNode, GameProtocol
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    //LifeCycle Fucntions
     func CheckBounds()
     {
         
